@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <!-- Site Title-->
+    <title>Prediction</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="{{ url_for('static', filename='assets/images/ineur_icon.ico') }}" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Fira+Sans:300,600,800,800i%7COpen+Sans:300,400,400i">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/fonts.css') }}">
+    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+  </head>
+  <body>
+    <!--div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div-->
+    <div class="preloader">
+      <div class="cssload-container">
+        <svg class="filter" version="1.1">
+          <defs>
+            <filter id="gooeyness">
+              <fegaussianblur in="SourceGraphic" stddeviation="10" result="blur"></fegaussianblur>
+              <fecolormatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10" result="gooeyness"></fecolormatrix>
+              <fecomposite in="SourceGraphic" in2="gooeyness" operator="atop"></fecomposite>
+            </filter>
+          </defs>
+        </svg>
+        <div class="dots">
+          <div class="dot mainDot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        <p>Loading...</p>
+      </div>
+    </div>
+    <!-- Page-->
+    <div class="page">
+
+      <header class="page-header">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar rd-navbar-default" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-sm-device-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-static" data-lg-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-stick-up-clone="false" data-sm-stick-up="true" data-md-stick-up="true" data-lg-stick-up="true" data-md-stick-up-offset="115px" data-lg-stick-up-offset="35px">
+            <!-- RD Navbar Top Panel-->
+            <div class="rd-navbar-top-panel rd-navbar-top-panel-dark">
+              <div class="rd-navbar-top-panel__main">
+                <div class="rd-navbar-top-panel__toggle rd-navbar-fixed__element-1 rd-navbar-static--hidden" data-rd-navbar-toggle=".rd-navbar-top-panel__main"><span></span></div>
+                <div class="rd-navbar-top-panel__content">
+                  <div class="rd-navbar-top-panel__left">
+                    <ul class="rd-navbar-items-list">
+                      <li>
+                        <div class="unit flex-row align-items-center unit-spacing-xs">
+                          <div class="unit__left"><span class="icon icon-sm icon-primary linear-icon-map-marker"></span></div>
+                          <div class="unit__body">
+                            <p><a href="#">Group: 4G --> Dress Sales Attributes</a></p>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="unit flex-row align-items-center unit-spacing-xs">
+                          <div class="unit__left"><span class="icon icon-sm icon-primary linear-icon-telephone"></span></div>
+                          <div class="unit__body">
+                            <ul class="list-semicolon">
+                              <li><a href="tel:#">(+48) 123-0045--06</a></li>
+                              <li><a href="tel:#">(+91) 123-0045--067</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="rd-navbar-top-panel__right">
+                    <ul class="list-inline-xxs">
+                      <li><a class="icon icon-xxs icon-gray-darker fa fa-facebook" href="#"></a></li>
+                      <li><a class="icon icon-xxs icon-gray-darker fa fa-twitter" href="#"></a></li>
+                      <li><a class="icon icon-xxs icon-gray-darker fa fa-google-plus" href="#"></a></li>
+                      <li><a class="icon icon-xxs icon-gray-darker fa fa-vimeo" href="#"></a></li>
+                      <li><a class="icon icon-xxs icon-gray-darker fa fa-youtube" href="#"></a></li>
+                      <li><a class="icon icon-xxs icon-gray-darker fa fa-pinterest-p" href="#"></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="rd-navbar-inner rd-navbar-search-wrap">
+              <!-- RD Navbar Panel-->
+              <div class="rd-navbar-panel rd-navbar-search-lg_collapsable">
+                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                <!-- RD Navbar Brand-->
+                <div class="rd-navbar-brand"><a class="brand-name" href="/"><img src="{{ url_for('static', filename='assets/images/logo-white-344x67_44.jpg') }}" alt="" width="172" height="33"/></a></div>
+              </div>
+              <!-- RD Navbar Nav-->
+              <div class="rd-navbar-nav-wrap rd-navbar-search_not-collapsable">
+                <div class="rd-navbar-search_collapsable">
+                  <ul class="rd-navbar-nav">
+                    <li><a href="/">Home</a>
+                    </li>
+                    <li><a href="/about/">About</a>
+                    </li>
+                    <li class="active"><a href="/predict/">Prediction</a>
+                    </li>
+                    <li><a href="/contacts/">Contacts</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- Parallax header-->
+      <section>
+              <section class="section parallax-container context-dark" data-parallax-img="{{ url_for('static', filename='assets/images/parallax-1_2.jpg') }}">
+                <div class="parallax-content parallax-header">
+                  <div class="parallax-header__inner context-dark">
+                    <div class="parallax-header__content">
+                      <div class="container">
+                        <div class="row justify-content-sm-center">
+                          <div class="col-md-10 col-xl-8">
+                            <h2 class="heading-decorated">Predict your Perfect Outfit!!!</h2>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+
+
+
+        <div class="bg-decor d-flex align-items-center justify-content-center" data-parallax-scroll="{&quot;y&quot;: 70, &quot;x&quot;: 50, &quot;smoothness&quot;: 30}"><img src="{{ url_for('static', filename='assets/images/bg-decor-10.png') }}" alt=""/>
+        </div>
+
+      <!-- services-->
+      <!--section class="section-md bg-default"-->
+        <div class="bg-decor d-flex align-items-center justify-content-end" data-parallax-scroll="{&quot;x&quot;: -100, &quot;y&quot;: -30, &quot;smoothness&quot;: 30}"><img src="{{ url_for('static', filename='assets/images/bg-decor-9.png') }}" alt=""/>
+        </div>
+
+          </div>
+
+
+
+      <div class="section-sm section-divided"  style="background-image: url({{ url_for('static', filename='assets/images/pred3.jpg') }})">
+        <div class="parallax-content parallax-header">
+        <div class="container">
+          <div class="row justify-content-sm-center">
+            <div class="col-md-10 col-xl-8">
+              <!-- Blockquotes-->
+              <section class="section-sm">
+                <h5></h5>
+                <!-- Quote centered-->
+                <div class="quote-centered">
+                  <svg class="quote-centered__mark" version="1.1" baseprofile="tiny" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40.234px" height="33.484px" viewbox="0 0 30.234 23.484" xml:space="preserve">
+                    <g>
+                      <path d="M12.129,0v1.723c-2.438,0.891-4.348,2.291-5.73,4.201c-1.383,1.911-2.074,3.897-2.074,5.959							c0,0.445,0.07,0.773,0.211,0.984c0.093,0.141,0.199,0.211,0.316,0.211c0.117,0,0.293-0.082,0.527-0.246							c0.75-0.539,1.699-0.809,2.848-0.809c1.336,0,2.519,0.545,3.551,1.635c1.031,1.09,1.547,2.385,1.547,3.885							c0,1.57-0.592,2.953-1.775,4.148c-1.184,1.195-2.619,1.793-4.307,1.793c-1.969,0-3.668-0.809-5.098-2.426							C0.715,19.441,0,17.274,0,14.555c0-3.164,0.972-6,2.918-8.508C4.863,3.539,7.933,1.524,12.129,0z M29.039,0v1.723							c-2.438,0.891-4.348,2.291-5.73,4.201c-1.383,1.911-2.074,3.897-2.074,5.959c0,0.445,0.07,0.773,0.211,0.984							c0.094,0.141,0.199,0.211,0.316,0.211s0.293-0.082,0.527-0.246c0.75-0.539,1.699-0.809,2.848-0.809c1.336,0,2.52,0.545,3.551,1.635							s1.547,2.385,1.547,3.885c0,1.57-0.592,2.953-1.775,4.148s-2.619,1.793-4.307,1.793c-1.969,0-3.668-0.809-5.098-2.426							s-2.145-3.785-2.145-6.504c0-3.164,0.973-6,2.918-8.508C21.773,3.539,24.844,1.524,29.039,0z"></path>
+                    </g>
+                  </svg>
+                  <div class="quote-centered__text">
+                    <p class="q">Torture the data, and it will confess to anything. </p>
+                  </div>
+                  <p class="quote-centered__cite">Ronald Coase</p>
+                </div>
+              </section>
+
+              <div class="form">
+                  <form action="/predict_button" method="POST">
+                      <!--<div class="row">
+                          <div class="col-25">
+                              <label for="dress_id"><b>Dress ID</b></label>
+                          </div>
+                          <div class="col-75">
+                              <input type="number" name="dress_id" id="dress_id" placeholder="Enter Product ID">
+                          </div>
+                      </div>-->
+                      <div class="row">
+                          <div class="col-25">
+                              <label for="style"><b>Style</b></label>
+                          </div>
+                          <div class="col-75">
+                              <select id = "Style" name="Style" required>
+                                  <option value="" disabled selected hidden>Choose a Style</option>
+                                  <option value="Sexy">Sexy</option>
+                                  <option value="Casual">Casual</option>
+                                  <option value="vintage">vintage</option>
+                                  <option value="Brief">Brief</option>
+                                  <option value="cute">cute</option>
+                                  <option value="bohemian">bohemian</option>
+                                  <option value="Novelty">Novelty</option>
+                                  <option value="Flare">Flare</option>
+                                  <option value="party">party</option>
+                                  <option value="work">work</option>
+                                  <option value="OL">OL</option>
+                                  <option value="fashion">fashion</option>
+                              </select>
+                          </div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-25">
+                              <label for="price"><b>Price</b></label>
+                          </div>
+                          <div class="col-75">
+                              <select id="Price" name="Price">
+                                  <option value="" disabled selected hidden>Choose a Price Range</option>
+                                  <option value="Low">Low</option>
+                                  <option value="High">High</option>
+                                  <option value="Average">Average</option>
+                                  <option value="Medium">Medium</option>
+                                  <option value="very-high">very-high</option>
+                              </select>
+                          </div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-25">
+                              <label for="Rating"><b>Product Rating</b></label>
+                          </div>
+                          <div class="col-75">
+                              <input type="number" name="Rating" id="Rating" placeholder="Rating 1-5">
+                          </div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-25">
+                              <label for="size"><b>Size</b></label>
+                          </div>
+                          <div class="col-75">
+                              <select id="Size" name="Size" required>
+                                  <option value="" disabled selected hidden>Choose a Size</option>
+                                  <option value="M">M</option>
+                                  <option value="L">L</option>
+                                  <option value="XL">XL</option>
+                                  <option value="free">free</option>
+                                  <option value="S">S</option>
+                              </select>
+                          </div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-25">
+                              <label for="season"><b>Season</b></label>
+                          </div>
+                          <div class="col-75">
+                              <select id="Season" name="Season" required>
+                                  <option value="" disabled selected hidden>Choose a Season</option>
+                                  <option value="Summer">Summer</option>
+                                  <option value="Autumn">Autumn</option>
+                                  <option value="Spring">Spring</option>
+                                  <option value="Winter">Winter</option>
+                              </select>
+                          </div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-25">
+                              <label for="neckline"><b>Neckline</b></label>
+                          </div>
+                          <div class="col-75">
+                              <select id="NeckLine" name="NeckLine" required>
+                                  <option value="" disabled selected hidden>Choose a NeckLine</option>
+                                  <option value="o-neck">o-neck</option>
+                                  <option value="v-neck">v-neck</option>
+                                  <option value="boat-neck">boat-neck</option>
+                                  <option value="peterpan-collor">peterpan-collor</option>
+                                  <option value="ruffled">ruffled</option>
+                                  <option value="turndowncollor">turndowncollor</option>
+                                  <option value="slash-neck">slash-neck</option>
+                                  <option value="mandarin-collor">mandarin-collor</option>
+                                  <option value="open">open</option>
+                                  <option value="sqare-collor">sqare-collor</option>
+                                  <option value="Sweetheart">Sweetheart</option>
+                                  <option value="Scoop">Scoop</option>
+                                  <option value="halter">halter</option>
+                                  <option value="backless">backless</option>
+                                  <option value="bowneck">bowneck</option>
+                              </select>
+                          </div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-25">
+                              <label for="sleeveLength"><b>SleeveLength</b></label>
+                          </div>
+                          <div class="col-75">
+                              <select id="SleeveLength" name="SleeveLength" required>
+                                  <option value="" disabled selected hidden>Choose a SleeveLength</option>
+                                  <option value="Sleeveless">Sleeveless</option>
+                                  <option value="Petal">Petal</option>
+                                  <option value="full">full</option>
+                                  <option value="butterfly">butterfly</option>
+                                  <option value="short">short</option>
+                                  <option value="threequarter">threequarter</option>
+                                  <option value="half">half</option>
+                                  <option value="cap-sleeves">cap-sleeves</option>
+                                  <option value="turndowncollor">turndowncollor</option>
+                              </select>
+                          </div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-25">
+                              <label for="waiseline"><b>Waiseline</b></label>
+                          </div>
+                          <div class="col-75">
+                              <select id="Waiseline" name="Waiseline" required>
+                                  <option value="" disabled selected hidden>Choose a waiseline</option>
+                                  <option value="empire">empire</option>
+                                  <option value="natural">natural</option>
+                                  <option value="princess">princess</option>
+                                  <option value="dropped">dropped</option>
+                              </select>
+                          </div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-25">
+                              <label for="material"><b>Material</b></label>
+                          </div>
+                          <div class="col-75">
+                              <select id="Material" name="Material" required>
+                                  <option value="" disabled selected hidden>Choose a Material Type</option>
+                                  <option value="microfiber">microfiber</option>
+                                  <option value="polyster">polyster</option>
+                                  <option value="silk">silk</option>
+                                  <option value="chiffonfabric">chiffonfabric</option>
+                                  <option value="cotton">cotton</option>
+                                  <option value="nylon">nylon</option>
+                                  <option value="other">other</option>
+                                  <option value="milksilk">milksilk</option>
+                                  <option value="linen">linen</option>
+                                  <option value="rayon">rayon</option>
+                                  <option value="lycra">lycra</option>
+                                  <option value="mix">mix</option>
+                                  <option value="acrylic">acrylic</option>
+                                  <option value="spandex">spandex</option>
+                                  <option value="lace">lace</option>
+                                  <option value="modal">modal</option>
+                                  <option value="cashmere">cashmere</option>
+                                  <option value="viscos">viscos</option>
+                                  <option value="knitting">knitting</option>
+                                  <option value="wool">wool</option>
+                              </select>
+                          </div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-25">
+                              <label for="PatternType"><b>PatternType</b></label>
+                          </div>
+                          <div class="col-75">
+                              <select id="PatternType" name="PatternType" required>
+                                  <option value="" disabled selected hidden>Choose a PatternType</option>
+                                  <option value="animal">animal</option>
+                                  <option value="print">print</option>
+                                  <option value="dot">dot</option>
+                                  <option value="solid">solid</option>
+                                  <option value="patchwork">patchwork</option>
+                                  <option value="striped">striped</option>
+                                  <option value="geometric">geometric</option>
+                                  <option value="plaid">plaid</option>
+                                  <option value="leopard">leopard</option>
+                                  <option value="floral">floral</option>
+                                  <option value="character">character</option>
+                                  <option value="splice">splice</option>
+                              </select>
+                          </div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-25">
+                              <label for="total_sale"><b>Product Count</b> </label>
+                          </div>
+                          <div class="col-75">
+                              <input type="number" name="total_sale" id="total_sale" placeholder="Product Sold">
+                          </div>
+                      </div>
+
+                      <div class="row">
+                          <input type="submit" value="Predict" class="button button-black button-shadow">
+                      </div>
+
+                  </form>
+              </div>
+
+
+
+
+
+
+              <!-- Calendar-->
+              <section class="section-sm">
+                <h6>Calendar</h6>
+                <!-- RD Calendar-->
+                <div class="booking-calendar booking-calendar-aside" id="chapters-select" data-events-inline="true">
+                  <div class="rdc-panel">
+                    <div class="small"><span class="rdc-month"></span> <span class="rdc-fullyear"></span>
+                    </div>
+                  </div>
+                  <div class="rdc-table"></div>
+                  <div class="rdc-events"><a class="rdc-events_close"></a>
+                    <ul class="list-unstyled">
+                                    <li class="rdc-event" data-date="10/16/2019">
+                    </ul>
+                  </div>
+                  <div class="rdc-panel-nav">
+                    <button class="rdc-prev">Prev month</button>
+                    <button class="rdc-next">Next month</button>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Follow us-->
+              <section class="section-sm">
+                <h6>Follow Us</h6>
+                              <ul class="list-inline-sm">
+                                <li><a class="icon-sm fa-facebook novi-icon icon" href="#"></a></li>
+                                <li><a class="icon-sm fa-twitter novi-icon icon" href="#"></a></li>
+                                <li><a class="icon-sm fa-google-plus novi-icon icon" href="#"></a></li>
+                                <li><a class="icon-sm fa-vimeo novi-icon icon" href="#"></a></li>
+                                <li><a class="icon-sm fa-youtube novi-icon icon" href="#"></a></li>
+                                <li><a class="icon-sm fa-pinterest-p novi-icon icon" href="#"></a></li>
+                              </ul>
+
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <section class="pre-footer-corporate bg-image-7 bg-overlay-darkest">
+        <div class="container">
+          <div class="row justify-content-sm-center justify-content-lg-start row-30 row-md-60">
+            <div class="col-sm-10 col-md-6 col-lg-10 col-xl-3"><a class="brand" href="/"><img src="{{ url_for('static', filename='assets/images/logo-white-344x67_44.jpg') }}" alt="" width="172" height="33"/></a>
+              <p>BBSS is a one of the team named 4G from Ineuron academy. It makes the process of learning Data Science much easier.
+                As an Ineuron students, this project would be our first approach towards the emerging technologies of Artificial Intelligence.</p>
+            </div>
+            <div class="col-sm-10 col-md-6 col-lg-3 col-xl-3">
+              <h6>Navigation</h6>
+              <ul class="list-xxs list-primary">
+                <li><a href="/about/">About</a></li>
+                <li><a href="/predict/">Prediction</a></li>
+                <li><a href="/contacts/">Ineuron-Students</a></li>
+                <li><a href="https://academy.ineuron.ai/">Ineuron Academy</a></li>
+                <li><a href="#">Mentors</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-10 col-md-6 col-lg-4 col-xl-3">
+              <h6>Contacts</h6>
+              <ul class="list-xs">
+                <li>
+                  <dl class="list-terms-minimal">
+                    <dt>Group</dt>
+                    <dd>4G --> Dress Sales Attribites</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl class="list-terms-minimal">
+                    <dt>Phones</dt>
+                    <dd>
+                      <ul class="list-semicolon">
+                        <li><a href="tel:#">(+91) 123-0045--067</a></li>
+                        <li><a href="tel:#">(+48) 123-0045--06</a></li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl class="list-terms-minimal">
+                    <dt>E-mail</dt>
+                    <dd><a class="link-primary" href="mailto:#">abc@yyz.ai</a></dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl class="list-terms-minimal">
+                    <dt>We are open</dt>
+                    <dd>Mon-Sun: 24x7</dd>
+                  </dl>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer-corporate bg-gray-darkest">
+        <div class="container">
+          <div class="footer-corporate__inner">
+            <p class="rights"><span>Ineuron</span><span>&nbsp;&copy;&nbsp;</span><span class="copyright-year"></span>. All Rights Reserved. Design by <a href="https://www.bbss.ai">BBSS</a></p>
+            <ul class="list-inline-xxs">
+              <li><a class="icon icon-xxs icon-gray-darker fa fa-facebook" href="#"></a></li>
+              <li><a class="icon icon-xxs icon-gray-darker fa fa-twitter" href="#"></a></li>
+              <li><a class="icon icon-xxs icon-gray-darker fa fa-google-plus" href="#"></a></li>
+              <li><a class="icon icon-xxs icon-gray-darker fa fa-vimeo" href="#"></a></li>
+              <li><a class="icon icon-xxs icon-gray-darker fa fa-youtube" href="#"></a></li>
+              <li><a class="icon icon-xxs icon-gray-darker fa fa-pinterest" href="#"></a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Javascript-->
+    <script src="{{ url_for('static', filename='assets/js/core.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/script.js') }}"></script>
+  </body>
+</html>

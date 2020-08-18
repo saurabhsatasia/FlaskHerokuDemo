@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <!-- Site Title-->
+    <title>Home</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="{{ url_for('static', filename='assets/images/ineur_icon.ico') }}" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Fira+Sans:300,600,800,800i%7COpen+Sans:300,400,400i">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/fonts.css') }}">
+    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+  </head>
+  <body>
+
+    <div class="preloader">
+      <div class="cssload-container">
+        <svg class="filter" version="1.1">
+          <defs>
+            <filter id="gooeyness">
+              <fegaussianblur in="SourceGraphic" stddeviation="10" result="blur"></fegaussianblur>
+              <fecolormatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10" result="gooeyness"></fecolormatrix>
+              <fecomposite in="SourceGraphic" in2="gooeyness" operator="atop"></fecomposite>
+            </filter>
+          </defs>
+        </svg>
+        <div class="dots">
+          <div class="dot mainDot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        <p>Loading...</p>
+      </div>
+    </div>
+
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar rd-navbar_transparent rd-navbar_boxed" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-sm-device-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-stick-up-clone="false" data-sm-stick-up="true" data-md-stick-up="true" data-lg-stick-up="true" data-md-stick-up-offset="115px" data-lg-stick-up-offset="35px" data-body-class="rd-navbar-absolute">
+            <!-- RD Navbar Top Panel-->
+            <div class="rd-navbar-top-panel">
+              <div class="rd-navbar-top-panel__main">
+                <div class="rd-navbar-top-panel__toggle rd-navbar-fixed__element-1 rd-navbar-static--hidden" data-rd-navbar-toggle=".rd-navbar-top-panel__main"><span></span></div>
+                <div class="rd-navbar-top-panel__content">
+                  <div class="rd-navbar-top-panel__left">
+                    <ul class="rd-navbar-items-list">
+                      <li>
+                        <div class="unit flex-row align-items-center unit-spacing-xs">
+                          <div class="unit__left"><span class="icon icon-sm icon-primary linear-icon-map-marker"></span></div>
+                          <div class="unit__body">
+                            <p><a href="#">Group: 4G --> Dress Sales Attributes</a></p>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="unit flex-row align-items-center unit-spacing-xs">
+                          <div class="unit__left"><span class="icon icon-sm icon-primary linear-icon-telephone"></span></div>
+                          <div class="unit__body">
+                            <ul class="list-semicolon">
+                              <li><a href="tel:#">(+91) 123-0456--006</a></li>
+                              <li><a href="tel:#">(+48) 123-0456--07</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="rd-navbar-top-panel__right">
+                    <ul class="list-inline-xxs">
+                      <li><a class="icon icon-xxs icon-gray-darker fa fa-facebook" href="#"></a></li>
+                      <li><a class="icon icon-xxs icon-gray-darker fa fa-twitter" href="#"></a></li>
+                      <li><a class="icon icon-xxs icon-gray-darker fa fa-google-plus" href="#"></a></li>
+                      <li><a class="icon icon-xxs icon-gray-darker fa fa-vimeo" href="#"></a></li>
+                      <li><a class="icon icon-xxs icon-gray-darker fa fa-youtube" href="#"></a></li>
+                      <li><a class="icon icon-xxs icon-gray-darker fa fa-pinterest-p" href="#"></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="rd-navbar-inner rd-navbar-search-wrap">
+              <!-- RD Navbar Panel-->
+              <div class="rd-navbar-panel rd-navbar-search-lg_collapsable">
+                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                <!-- RD Navbar Brand-->
+                <div class="rd-navbar-brand"><a class="brand-name" href="/"><img src="{{ url_for('static', filename='assets/images/logo-white-344x67_44.jpg') }}" alt="" width="172" height="33"/></a></div>
+              </div>
+              <!-- RD Navbar Nav-->
+              <div class="rd-navbar-nav-wrap rd-navbar-search_not-collapsable">
+                <div class="rd-navbar-search_collapsable">
+                  <ul class="rd-navbar-nav">
+                    <li class="active"><a href="/">Home</a>
+                    </li>
+                    <li><a href="/about/">About</a>
+                    </li>
+                    <li><a href="/predict/">Prediction</a>
+                    </li>
+                    <li><a href="/contacts/">Ineuron - Students</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- Swiper-->
+      <section>
+      <svg class="defs">
+        <defs>
+          <lineargradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="50%" stop-color="#AA54ED">
+              <animate attributename="stop-color" values="#AA54ED; #5348E2; #AA54ED" dur="5s" repeatcount="indefinite"></animate>
+            </stop>
+            <stop offset="100%" stop-color="#5348E2">
+              <animate attributename="stop-color" values="#5348E2; #AA54ED; #5348E2" dur="5s" repeatcount="indefinite"></animate>
+            </stop>
+          </lineargradient>
+        </defs>
+      </svg>
+      <div class="swiper-container swiper-slider" data-effect="frame-trapeze" data-loop="true" data-autoplay="5500" data-speed="1200" data-mousewheel="false" data-keyboard="true" data-frame-fill="url(#gradient1)">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="swiper-slide-img" style="background-image: url({{ url_for('static', filename='assets/images/slider-slide-5-1920x1280_2.jpg') }}) ;" data-swiper-anime="{ &quot;animation&quot;: &quot;swiperSlideRotate&quot;, &quot;duration&quot;: 2000, &quot;delay&quot;: 600 }"></div>
+            <div class="swiper-slide-caption text-center context-dark">
+              <h1 data-swiper-anime="{ &quot;animation&quot;: &quot;swiperContentStack&quot;, &quot;duration&quot;: 1000, &quot;delay&quot;: 500 }">Features</h1>
+              <h3 data-swiper-anime="{ &quot;animation&quot;: &quot;swiperContentStack&quot;, &quot;duration&quot;: 1000, &quot;delay&quot;: 600 }">Redefining Fashion Stlyes  </h3>
+              <div class="group-lg group-middle" data-swiper-anime="{ &quot;animation&quot;: &quot;swiperContentStack&quot;, &quot;duration&quot;: 1000, &quot;delay&quot;: 700 }"><a class="button button-primary button-shadow" href="#features" data-custom-scroll-to="features">See Features</a><a class="button button-black button-shadow" href="/predict/">Predict</a></div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-slide-img" style="background-image: url({{ url_for('static', filename='assets/images/pred2.jpg') }});" data-swiper-anime="{ &quot;animation&quot;: &quot;swiperSlideRotate&quot;, &quot;duration&quot;: 2000, &quot;delay&quot;: 600 }"></div>
+            <div class="swiper-slide-caption context-dark">
+              <h2 data-swiper-anime="{ &quot;animation&quot;: &quot;swiperContentStack&quot;, &quot;duration&quot;: 1000, &quot;delay&quot;: 500 }">The Power of Clothing<br class="d-none d-lg-block"> Discover it with Features</h2>
+              <a class="button button-primary button-shadow" href="/predict/" data-swiper-anime="{ &quot;animation&quot;: &quot;swiperContentStack&quot;, &quot;duration&quot;: 1000, &quot;delay&quot;: 700 }">Predict</a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-slide-img" style="background-image: url({{ url_for('static', filename='assets/images/slider-slide-7-1920x1080_2.jpg') }});" data-swiper-anime="{ &quot;animation&quot;: &quot;swiperSlideRotate&quot;, &quot;duration&quot;: 2000, &quot;delay&quot;: 600 }"></div>
+            <div class="swiper-slide-caption context-dark">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-lg-7">
+                    <h2 data-swiper-anime="{ &quot;animation&quot;: &quot;swiperContentStack&quot;, &quot;duration&quot;: 1000, &quot;delay&quot;: 500 }">Built by geeks & used by humans</h2>
+                    <h5 class="text-width-2 block-centered" data-swiper-anime="{ &quot;animation&quot;: &quot;swiperContentStack&quot;, &quot;duration&quot;: 1000, &quot;delay&quot;: 600 }">Element aims to satisfy real needs of real fashion. We've got a pack of features for that.</h5>
+                    <div class="group-lg group-middle" data-swiper-anime="{ &quot;animation&quot;: &quot;swiperContentStack&quot;, &quot;duration&quot;: 1000, &quot;delay&quot;: 700 }"><a class="button button-black button-shadow" href="#features" data-custom-scroll-to="features">See Features</a><a class="button button-primary button-shadow" href="/predict/">Predict</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev linear-icon-chevron-left"></div>
+        <div class="swiper-button-next linear-icon-chevron-right"></div>
+      </div>
+      <section class="section-xs section-cta bg-gray-dark text-center text-md-left">
+        <div class="container">
+          <div class="row row-30 justify-content-between align-items-center">
+            <div class="col-12 col-md-8">
+              <h4>Like What We Predict?</h4>
+              <p>Start with this automated prediction by selecting features.</p>
+            </div>
+            <div class="col-12 col-md-4 text-md-right"><a class="button button-primary" href="/about/">Read more</a></div>
+          </div>
+        </div>
+      </section>
+      <!-- About us-->
+      <section class="bg-gray-lighter object-wrap">
+        <div class="bg-decor d-flex align-items-center justify-content-start" data-parallax-scroll="{&quot;y&quot;: 50,  &quot;smoothness&quot;: 30}"><img src="{{ url_for('static', filename='assets/images/bg-decor-4.png') }}" alt=""/>
+        </div>
+        <div class="section-lg">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-5">
+                <h4 class="heading-decorated">About us</h4>
+                <p>BBSS boasts clean and crispy design, bulletproof layout consistency and intuitive navigation. Don't be into trends. Don't make fashion own you, but you decide what you are, what you want to express by the way you dress and the way to live.</p>
+                <div class="row row-30">
+                  <div class="col-xl-6">
+                    <!-- Blurb minimal-->
+                    <article class="blurb blurb-minimal">
+                      <div class="unit flex-row unit-spacing-md">
+                        <div class="unit-left">
+                          <div class="blurb-minimal__icon"><span class="icon linear-icon-menu3"></span></div>
+                        </div>
+                        <div class="unit-body">
+                          <p class="blurb__title heading-6"><a href="#">No awards, just an experiment</a></p>
+                          <p>Trying to learn new designs, concepts, and ideas.</p>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="col-xl-6">
+                    <!-- Blurb minimal-->
+                    <article class="blurb blurb-minimal">
+                      <div class="unit flex-row unit-spacing-md">
+                        <div class="unit-left">
+                          <div class="blurb-minimal__icon"><span class="icon linear-icon-users2"></span></div>
+                        </div>
+                        <div class="unit-body">
+                          <p class="blurb__title heading-6"><a href="#">Expert Beginners team</a></p>
+                          <p>We are a team of dedicated Civil and Mechanical professionals.</p>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+                <div class="row justify-content-md-center">
+                  <div class="col-md-12">
+                    <!-- Linear progress bar-->
+                    <div class="progress-linear progress-linear-modern">
+                      <div class="progress-header">
+                        <p>Dedication</p><span class="progress-value">49</span>
+                      </div>
+                      <div class="progress-bar-linear-wrap">
+                        <div class="progress-bar-linear"></div>
+                      </div>
+                    </div>
+                    <!-- Linear progress bar-->
+                    <div class="progress-linear progress-linear-modern">
+                      <div class="progress-header">
+                        <p>Experience</p><span class="progress-value">29</span>
+                      </div>
+                      <div class="progress-bar-linear-wrap">
+                        <div class="progress-bar-linear"></div>
+                      </div>
+                    </div>
+                    <!-- Linear progress bar-->
+                    <div class="progress-linear progress-linear-modern">
+                      <div class="progress-header">
+                        <p>Creativity</p><span class="progress-value">86</span>
+                      </div>
+                      <div class="progress-bar-linear-wrap">
+                        <div class="progress-bar-linear"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="object-wrap__body object-wrap__body-sizing-1 object-wrap__body-md-right bg-image" style="background-image: url({{ url_for('static', filename='assets/images/bg-image-1_2.jpg') }})"></div>
+      </section>
+      <!-- Our Services-->
+      <!--section class="section-md bg-default text-center decor-text" id="features" data-content="4G"-->
+        <div class="bg-decor d-flex align-items-center" data-parallax-scroll="{&quot;x&quot;: 80,  &quot;smoothness&quot;: 30}"><img src="{{ url_for('static', filename='assets/images/bg-decor-1.png') }}" alt=""/>
+        </div>
+        <div class="container">
+          <h4 class="heading-decorated">Features for Prediction</h4>
+          <div class="row row-50 justify-content-md-center justify-content-lg-start text-left">
+            <div class="col-md-6 col-xl-4">
+              <!-- Blurb circle-->
+              <article class="blurb blurb-minimal">
+                <div class="unit flex-row unit-spacing-md">
+                  <div class="unit-left">
+                    <div class="blurb-minimal__icon"><span class="icon linear-icon-pencil-ruler"></span></div>
+                  </div>
+                  <div class="unit-body">
+                    <p class="blurb__title heading-6"><a href="#">Types of Style</a></p>
+                    <p>Presenting and Prevailing mode of clothing styles.</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-4">
+              <!-- Blurb circle-->
+              <article class="blurb blurb-minimal">
+                <div class="unit flex-row unit-spacing-md">
+                  <div class="unit-left">
+                    <div class="blurb-minimal__icon"><span class="icon linear-icon-users"></span></div>
+                  </div>
+                  <div class="unit-body">
+                    <p class="blurb__title heading-6"><a href="#">Budget/Price</a></p>
+                    <p>Use Price feature to that corresponds to your Budget.</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-4">
+              <!-- Blurb circle-->
+              <article class="blurb blurb-minimal">
+                <div class="unit flex-row unit-spacing-md">
+                  <div class="unit-left">
+                    <div class="blurb-minimal__icon"><span class="icon linear-icon-wall"></span></div>
+                  </div>
+                  <div class="unit-body">
+                    <p class="blurb__title heading-6"><a href="#">Size</a></p>
+                    <p>Clothing size refers to the label sizes used for garments sold off-the-shelf.Great feature even for Obese</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-4">
+              <!-- Blurb circle-->
+              <article class="blurb blurb-minimal">
+                <div class="unit flex-row unit-spacing-md">
+                  <div class="unit-left">
+                    <div class="blurb-minimal__icon"><span class="icon linear-icon-apartment"></span></div>
+                  </div>
+                  <div class="unit-body">
+                    <p class="blurb__title heading-6"><a href="#">Seasonal Wear</a></p>
+                    <p>This climatic change means change in your wardrobe and with every new season brings a new style and fashion with it.</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-4">
+              <!-- Blurb circle-->
+              <article class="blurb blurb-minimal">
+                <div class="unit flex-row unit-spacing-md">
+                  <div class="unit-left">
+                    <div class="blurb-minimal__icon"><span class="icon linear-icon-home4"></span></div>
+                  </div>
+                  <div class="unit-body">
+                    <p class="blurb__title heading-6"><a href="#">Neck-Line</a></p>
+                    <p>The neckline is the top edge of a garment that surrounds the neck, especially from the front view with great flexibility.</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-4">
+              <!-- Blurb circle -->
+              <article class="blurb blurb-minimal">
+                <div class="unit flex-row unit-spacing-md">
+                  <div class="unit-left">
+                    <div class="blurb-minimal__icon"><span class="icon linear-icon-pencil-ruler2"></span></div>
+                  </div>
+                  <div class="unit-body">
+                    <p class="blurb__title heading-6"><a href="#">Sleeve-Length</a></p>
+                    <p>Sleeve length varies from barely over the shoulder (cap sleeve) to floor-length. Most contemporary shirt sleeves end somewhere between the mid-upper arm and the wrist.</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <!-- Blurb minimal-->
+              <article class="blurb blurb-minimal">
+                <div class="unit flex-row unit-spacing-md">
+                  <div class="unit-left">
+                    <div class="blurb-minimal__icon"><span class="icon linear-icon-magic-wand"></span></div>
+                  </div>
+                  <div class="unit-body">
+                    <p class="blurb__title heading-6"><a href="#">Waist-Line</a></p>
+                    <p>The waistline is the line of demarcation between the upper and lower portions of a garment, which notionally corresponds
+                      to the natural waist but may vary with fashion from just below the bust to below the hips.
+                      The waistline of a garment is often used to accentuate different features.</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <!-- Blurb minimal-->
+              <article class="blurb blurb-minimal">
+                <div class="unit flex-row unit-spacing-md">
+                  <div class="unit-left">
+                    <div class="blurb-minimal__icon"><span class="icon linear-icon-menu3"></span></div>
+                  </div>
+                  <div class="unit-body">
+                    <p class="blurb__title heading-6"><a href="#">Clothing Material</a></p>
+                    <p>Clothes today are made from a wide range of different materials. Traditional materials such as cotton, linen and leather are still sourced from plants and animals.</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <!-- Blurb minimal-->
+              <article class="blurb blurb-minimal">
+                <div class="unit flex-row unit-spacing-md">
+                  <div class="unit-left">
+                    <div class="blurb-minimal__icon"><span class="icon linear-icon-users2"></span></div>
+                  </div>
+                  <div class="unit-body">
+                    <p class="blurb__title heading-6"><a href="#">Fabric-Type</a></p>
+                    <p>Fabrics in this list include fabrics that are woven, braided or knitted from textile fibres.</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <!-- Blurb minimal-->
+              <article class="blurb blurb-minimal">
+                <div class="unit flex-row unit-spacing-md">
+                  <div class="unit-left">
+                    <div class="blurb-minimal__icon"><span class="icon linear-icon-users2"></span></div>
+                  </div>
+                  <div class="unit-body">
+                    <p class="blurb__title heading-6"><a href="#">Decoration</a></p>
+                    <p>Decorated Clothes are a more decorated form of civilian clothing that can be used to show how prestigious a tribe has become.</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <!-- Blurb minimal-->
+              <article class="blurb blurb-minimal">
+                <div class="unit flex-row unit-spacing-md">
+                  <div class="unit-left">
+                    <div class="blurb-minimal__icon"><span class="icon linear-icon-users2"></span></div>
+                  </div>
+                  <div class="unit-body">
+                    <p class="blurb__title heading-6"><a href="#">Pattern-Type</a></p>
+                    <p> a pattern is the template from which the parts of a garment are traced onto fabric before being cut out and assembled.</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--section class="section-md bg-gray-lighter text-center decor-text" data-content="Process"-->
+        <div class="container">
+          <h4 class="heading-decorated">Our working process</h4>
+          <div class="row row-30 justify-content-center">
+            <div class="col-sm-10 col-lg-6"><img src="{{ url_for('static', filename='assets/images/home-var-2-650x495_2.jpg') }}" alt="" width="650" height="495"/>
+            </div>
+            <div class="col-sm-10 col-lg-6">
+              <!-- Blurb circle-->
+              <article class="blurb blurb-circle">
+                <div class="unit flex-row unit-spacing-md">
+                  <div class="unit-left">
+                    <div class="blurb-circle__icon"><span class="icon linear-icon-feather"></span></div>
+                  </div>
+                  <div class="unit-body">
+                    <p class="blurb__title heading-6">Exploratory Data Analysis</p>
+                    <p>Firstly, analysed both the datasets, Featuring Engineering, Feature Extraction and came up with clean and crisp features.</p>
+                  </div>
+                </div>
+              </article>
+              <!-- Blurb circle-->
+              <article class="blurb blurb-circle">
+                <div class="unit flex-row unit-spacing-md">
+                  <div class="unit-left">
+                    <div class="blurb-circle__icon"><span class="icon linear-icon-menu3"></span></div>
+                  </div>
+                  <div class="unit-body">
+                    <p class="blurb__title heading-6">Building ML Models</p>
+                    <p>Then we implemented Ml Algos, Hyper-Parameter Tuning, API Creation, Database Connection, Dockerization.</p>
+                  </div>
+                </div>
+              </article>
+              <!-- Blurb circle-->
+              <article class="blurb blurb-circle">
+                <div class="unit flex-row unit-spacing-md">
+                  <div class="unit-left">
+                    <div class="blurb-circle__icon"><span class="icon linear-icon-bag2"></span></div>
+                  </div>
+                  <div class="unit-body">
+                    <p class="blurb__title heading-6">Testing</p>
+                    <p>Finally, Quality analysis to make sure that everything works perfectly just as you would expect.</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--cta-->
+      <!-- Call to Action-->
+      <section class="section-md bg-accent bg-image text-center bg-overlay-darker" style="background-image: url({{ url_for('static', filename='assets/images/bg-image-8_2.jpg') }}); background-position: center 50%;">
+        <div class="container">
+          <div class="row justify-content-md-center">
+            <div class="col-md-11 col-lg-9 col-xl-8">
+              <h3 class="heading-decorated">Haven’t Found What You Like? Feel free screw us !!</h3><a class="button button-primary" href="/contacts/">Ineuron - Students</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Page Footer--><!--a class="banner" href="https://www.something.com/" target="_blank"><img src="images/intense_big_02.jpg" alt="" height="0"/--></a>
+      <section class="pre-footer-corporate bg-image-7 bg-overlay-darkest">
+        <div class="container">
+          <div class="row justify-content-sm-center justify-content-lg-start row-30 row-md-60">
+            <div class="col-sm-10 col-md-6 col-lg-10 col-xl-3">
+              <h6>About</h6>
+              <p>BBSS is a one of the team named 4G from Ineuron academy. It makes the process of learning Data Science much easier.
+                As an Ineuron students, this project would be our first approach towards the emerging technologies of Artificial Intelligence.</p>
+            </div>
+            <div class="col-sm-10 col-md-6 col-lg-3 col-xl-3">
+              <h6>Navigation</h6>
+              <ul class="list-xxs">
+                <li><a href="/about/">About</a></li>
+                <li><a href="/contacts/">Ineuron-Students</a></li>
+                <li><a href="https://academy.ineuron.ai/">Ineuron Academy</a></li>
+                <li><a href="/predict/">Prediction</a></li>
+                <li><a href="#">Our Mentors</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-10 col-md-6 col-lg-5 col-xl-3">
+              <h6>Recent Comments</h6>
+              <ul class="list-xs">
+                <li>
+                  <!-- Comment minimal-->
+                  <article class="comment-minimal">
+                    <p class="comment-minimal__author">Bivash B.</p>
+                    <p class="comment-minimal__link"><a href="#"></a></p>
+                  </article>
+                </li>
+                <li>
+                  <!-- Comment minimal-->
+                  <article class="comment-minimal">
+                    <p class="comment-minimal__author">Saurabh Satasia</p>
+                    <p class="comment-minimal__link"><a href="#"></a></p>
+                  </article>
+                </li>
+                <li>
+                  <!-- Comment minimal-->
+                  <article class="comment-minimal">
+                    <p class="comment-minimal__author">Mentor: Virat Sagar & Mohit Kashyap</p>
+                    <p class="comment-minimal__link"><a href="#"></a></p>
+                  </article>
+                </li>
+              </ul>
+            </div>
+            <div class="col-sm-10 col-md-6 col-lg-4 col-xl-3">
+              <h6>Contacts</h6>
+              <ul class="list-xs">
+                <li>
+                  <dl class="list-terms-minimal">
+                    <dt>Group</dt>
+                    <dd>4G --> Dress Sales Attributes</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl class="list-terms-minimal">
+                    <dt>Phones</dt>
+                    <dd>
+                      <ul class="list-semicolon">
+                        <li><a href="tel:#">(+48) 123-0045--067</a></li>
+                        <li><a href="tel:#">(+91) 123-0045--06</a></li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl class="list-terms-minimal">
+                    <dt>E-mail</dt>
+                    <dd><a href="mailto:#">abc@zzy.org</a></dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl class="list-terms-minimal">
+                    <dt>Opening Hours:</dt>
+                    <dd>Mon-Sun: 24 x 7</dd>
+                  </dl>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <footer class="footer-corporate bg-gray-darkest">
+        <div class="container">
+          <div class="footer-corporate__inner">
+            <p class="rights"><span>BBSS</span><span>&nbsp;</span><span class="copyright-year"></span>. All Rights Reserved. Design by <a href="https://www.bbss.ai">BBSS-Ineuron</a></p>
+            <ul class="list-inline-xxs">
+              <li><a class="icon icon-xxs icon-primary fa fa-facebook" href="#"></a></li>
+              <li><a class="icon icon-xxs icon-primary fa fa-twitter" href="#"></a></li>
+              <li><a class="icon icon-xxs icon-primary fa fa-google-plus" href="#"></a></li>
+              <li><a class="icon icon-xxs icon-primary fa fa-vimeo" href="#"></a></li>
+              <li><a class="icon icon-xxs icon-primary fa fa-youtube" href="#"></a></li>
+              <li><a class="icon icon-xxs icon-primary fa fa-pinterest" href="#"></a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Javascript-->
+    <script src="{{ url_for('static', filename='assets/js/core.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/script.js') }}"></script>
+  </body>
+</html>
